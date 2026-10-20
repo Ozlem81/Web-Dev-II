@@ -1,0 +1,162 @@
+
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff8f3;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #ff8a3d, #e85d2a);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    margin-top: 0;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Theme button */
+button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #e85d2a;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffe4d4;
+}
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Content cards */
+section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+#home,
+#contact {
+    grid-column: 1 / -1;
+}
+
+h2 {
+    color: #e85d2a;
+}
+
+h3 {
+    color: #333;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    gap: 12px;
+}
+
+.skill {
+    flex: 1;
+    background-color: #ffe4d4;
+    padding: 15px 5px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #ff8a3d, #e85d2a);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode section {
+    background-color: #333;
+}
+
+.dark-mode h2 {
+    color: #ffad75;
+}
+
+.dark-mode h3 {
+    color: white;
+}
+
+.dark-mode .skill {
+    background-color: #555;
+}
+
+/* Responsive mobile design */
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    header {
+        padding: 20px 15px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
